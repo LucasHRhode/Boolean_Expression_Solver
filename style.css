@@ -1,0 +1,213 @@
+/*--------------------------------------*
+  RESET & BASE
+ *--------------------------------------*/
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use a techy font family like Orbitron (linked in HTML) */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #0B0E14 url('img/circuit-background.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #EFEFEF;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/*--------------------------------------*
+  HEADER
+ *--------------------------------------*/
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  padding: 10px 0;
+}
+
+.header-background {
+  position: relative;
+  width: 100%;
+  height: 450px; 
+  background: url('img/circuit-left.png'), url('img/circuit-right.png');
+  background-repeat: no-repeat;
+  background-size: contain, contain; 
+  background-position: left center, right center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.logo-container {
+  max-width: 550px; 
+  text-align: center;
+}
+
+.bes-logo {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+header h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+  color: #FF9B42; /* Orange highlight */
+}
+
+.header-description {
+  font-size: 1.1rem;
+  color: #AEB7C2;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/*--------------------------------------*
+  MAIN LAYOUT
+ *--------------------------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Sections get a slightly transparent background */
+section {
+  background: rgba(15, 20, 26, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/*--------------------------------------*
+  INPUT SECTION
+ *--------------------------------------*/
+#expression-input h2 {
+  color: #70D6FF; /* A bright blue accent */
+  margin-bottom: 15px;
+}
+
+#bool-expression {
+  width: 100%;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #181B22;
+  color: #FFF;
+  resize: vertical;
+}
+
+/* Operator & action buttons */
+.button-group,
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  background: #3fc9ff; /* Blue button */
+  border: 1px solid #d9e2e6;
+  color: #0B0E14;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #FF9B42; /* Hover to orange */
+  border-color: #d9e2e6;
+  color: #0B0E14;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/*--------------------------------------*
+  RESULTS SECTION
+ *--------------------------------------*/
+#results h2 {
+  color: #fabf28; /* A lighter, more pastel orange */
+  margin-bottom: 10px;
+}
+
+#result-output p {
+  margin: 5px 0;
+}
+
+/*--------------------------------------*
+  C DEMO SECTION
+ *--------------------------------------*/
+#c-demo h2 {
+  color: #1390c1;
+}
+
+#c-demo p {
+  color: #AEB7C2;
+  margin-bottom: 10px;
+}
+
+/* Code snippet styling */
+#c-code-snippet {
+  background: #1F1F1F;
+  color: #D1D1D1;
+  padding: 15px;
+  border-radius: 6px;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.4;
+  overflow-x: auto;
+  border: 1px solid #333;
+}
+
+/*--------------------------------------*
+  TABLES (Truth Tables)
+ *--------------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th,
+table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background: #21354e;
+  color: #2fbdf6;
+  font-weight: 700;
+}
+
+table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+table tbody tr:hover {
+  background: rgba(255, 119, 0, 0.15);
+}
+
+/*--------------------------------------*
+  FOOTER
+ *--------------------------------------*/
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #CCC;
+  border-top: 1px solid #444;
+}

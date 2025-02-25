@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boolean Expression Solver</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="img/favicon.jpg">
+
+
+  <!-- Google Font for a tech-like style (Orbitron, optional) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-background">
+      <div class="logo-container">
+        <img src="img/boolean_expression_solver_logo.png" alt="BES Circuit Logo" class="bes-logo" />
+      </div>
+    </div>
+  
+    <h1>Boolean Expression Solver</h1>
+    <p class="header-description">
+      A user-friendly tool for typing Boolean logic with <strong>AND</strong>, <strong>OR</strong>, <strong>NOT</strong>, and complements.
+    </p>
+  </header>
+  
+
+  <!-- Main Content Area -->
+  <main>
+    <!-- Input & Operators Section -->
+    <section id="expression-input">
+      <h2>Input Your Expression</h2>
+      <textarea
+        id="bool-expression"
+        placeholder="Type here, e.g. A · B + !C"
+        rows="3"
+      ></textarea>
+
+      <!-- Operator Buttons -->
+      <div class="button-group">
+        <button id="btn-or" onclick="insertOperator('+')">OR (+)</button>
+        <button id="btn-and" onclick="insertOperator('·')">AND (·)</button>
+        <button id="btn-not" onclick="insertOperator('!')">NOT (!)</button>
+        <button id="btn-complement" onclick="convertComplement()">Convert Complement (')</button>
+      </div>
+
+      <!-- Evaluate & Truth Table Buttons -->
+      <div class="action-buttons">
+        <button id="btn-evaluate">Evaluate Expression</button>
+        <button id="btn-truth-table">Generate Truth Table</button>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results">
+      <h2>Results</h2>
+      <div id="result-output">
+        <!-- Evaluation or truth table will appear here -->
+      </div>
+    </section>
+
+    <!-- C Backend Demonstration Section -->
+    <section id="c-demo">
+      <h2>C Backend Demonstration</h2>
+      <p>
+        Below is a snippet of the C code demonstrating the CGI-based solver
+        functionality. When you click Evaluate, the server can process expressions
+        in the background.
+      </p>
+      <pre id="c-code-snippet">
+/* Sample C for Boolean Expression Solver */
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    char expression[256];
+    printf("Enter Boolean Expression: ");
+    fgets(expression, 256, stdin);
+    // Process expression here...
+    printf("Evaluated result: ...\n");
+    return 0;
+}
+      </pre>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Boolean Expression Solver. All rights reserved.</p>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
